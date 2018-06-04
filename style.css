@@ -1,0 +1,87 @@
+body {
+    background-image: url("file:///Users/evabarrett/coding/Unit1/week-two/Monch-Monch-Monch-/images/brick-gray.jpg");
+    background-repeat: repeat-y repeat-x;
+    margin-top: 25em;
+}
+
+h1 {
+  font-size: 200px;
+  text-align: center;
+  color: #0c59a8;
+  /* color: white; */
+    text-shadow: 20px 20px 44px #000000;
+  font-family: 'Spicy Rice', cursive;
+}
+
+.cookie1, .cookie2, .cookie3, .cookie4, .cookie5, .cookie6, .cookie7, .cookie8, .cookie9 {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+  border: black solid;
+  box-shadow: 10px 10px;
+  top: -5vh;
+  left: 0px;
+  animation: fall 10s infinite linear;
+}
+
+.cookie1 {
+  position: absolute;
+  top: 5vh;
+  left: 15vw;
+}
+
+.cookie2 {
+  left: 25vw;
+  animation-delay: .5s;
+}
+
+.cookie3 {
+  left: 35vw;
+}
+
+.cookie4 {
+  left: 45vw;
+}
+
+.cookie5 {
+  left: 55vw;
+}
+
+.cookie6 {
+  left: 65vw;
+}
+
+.cookie7 {
+  left: 75vw;
+}
+.cookie8 {
+  left: 85vw;
+}
+.cookie9 {
+  left: 95vw;
+}
+
+
+.blue-monster {
+  background: lightblue;
+  height: 150px;
+  width: 150px;
+  position: relative;
+  /* right: -50px; */
+
+}
+
+.blue-monster-main {
+  background: plum;
+  height: 250px;
+  width: 250px;
+}
+
+@keyframes fall {
+  0 {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(150vh);
+  }
+}
