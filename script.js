@@ -18,9 +18,13 @@ $(document).ready(function(){
   $(".s").click(function(){
     $(this).hide();
     score++
-    console.log(score)
+    // console.log(score)
+    $('p').text(function(index){
+      return (score + 1);
+    });
   });
 });
+
 
 // $(document).ready(function(){
 //   $(".cookie2").click(function(){
