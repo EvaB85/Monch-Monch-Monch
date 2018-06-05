@@ -197,6 +197,25 @@ h1 {
   border-radius: 50%;
 }
 
+.score {
+  width: 25em;
+  height: 5em;
+  /* 7d6439 bbb25e*/
+  background: #7d6439;
+  opacity: 0.8;
+  border-radius: 75px;
+  position: relative;
+  border: solid black;
+  margin-bottom: 10em;
+}
+
+p {
+  font-size: 3em;
+  color: white;
+  position: relative;
+  margin-top: -.02em;
+}
+
 
 .blue-monster {
   user-select: none;
@@ -207,7 +226,7 @@ h1 {
   /* right: -50px; */
 }
 
-.blue-monster-main {
+.cookie-monster {
   user-select: none;
   background: none;
   height: 380px;
