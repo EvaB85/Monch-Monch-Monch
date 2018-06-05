@@ -7,15 +7,15 @@ body {
 h1 {
   font-size: 200px;
   text-align: center;
-  color: #0c59a8;
   /* color: white; */
     text-shadow: 20px 20px 44px #000000;
   font-family: 'Spicy Rice', cursive;
+  color: #d7e4d9;
+  user-select: none;
+  color: #0c59a8;
 }
 
 .cookie1, .cookie2, .cookie3, .cookie4, .cookie5, .cookie6, .cookie7, .cookie8, .cookie9 {
-  height: 50px;
-  width: 50px;
   position: absolute;
   border: black solid;
   box-shadow: 10px 10px;
@@ -26,43 +26,80 @@ h1 {
 
 .cookie1 {
   position: absolute;
-  top: 5vh;
+  /* top: 15vh; */
   left: 15vw;
+  height: 80px;
+  width: 80px;
+  background: red;
+  animation-delay: 4.2s;
 }
 
 .cookie2 {
   left: 25vw;
-  animation-delay: .5s;
+  height: 80px;
+  width: 80px;
+  background: orange;
+  animation-delay: 7.5s;
 }
 
 .cookie3 {
   left: 35vw;
+  height: 80px;
+  width: 80px;
+  background: yellow;
+  animation-delay: 8.3s;
+
 }
 
 .cookie4 {
   left: 45vw;
+  height: 80px;
+  width: 80px;
+  background: green;
+  animation-delay: 1.7s;
 }
 
 .cookie5 {
   left: 55vw;
+  height: 80px;
+  width: 80px;
+  background: blue;
+  animation-delay: 3.2s;
 }
 
 .cookie6 {
   left: 65vw;
+  height: 80px;
+  width: 80px;
+  background: purple;
+  animation-delay: 2.9s;
 }
 
 .cookie7 {
   left: 75vw;
+  height: 80px;
+  width: 80px;
+  background: white;
+  animation-delay: 5.1s;
 }
 .cookie8 {
   left: 85vw;
+  height: 80px;
+  width: 80px;
+  background: black;
+  animation-delay: 4.2s;
 }
 .cookie9 {
   left: 95vw;
+  height: 80px;
+  width: 80px;
+  background: pink;
+  animation-delay: 6.5s;
 }
 
 
 .blue-monster {
+  user-select: none;
   background: lightblue;
   height: 150px;
   width: 150px;
@@ -72,6 +109,7 @@ h1 {
 }
 
 .blue-monster-main {
+  user-select: none;
   background: plum;
   height: 250px;
   width: 250px;

@@ -1,12 +1,51 @@
+$('.cookie1').click(function() {
+  $('.cookie1').toggle();
+});
+
+$('.cookie2').click(function() {
+  $('.cookie2').toggle();
+});
+
+$('.cookie3').click(function() {
+  $('.cookie3').toggle();
+});
+
+$('.cookie4').click(function() {
+  $('.cookie4').toggle();
+});
+
+$('.cookie5').click(function() {
+  $('.cookie5').toggle();
+});
+
+$('.cookie6').click(function() {
+  $('.cookie6').toggle();
+});
+
+$('.cookie7').click(function() {
+  $('.cookie7').toggle();
+});
+
+$('.cookie8').click(function() {
+  $('.cookie8').toggle();
+});
+
+$('.cookie9').click(function() {
+  $('.cookie9').toggle();
+});
+
+
+
+
 var cookieOne = {
   element: $('#cookie1'),
   position: 0
 }
 
-$( "#cookie1" ).on( "click", function() {
-     runEffect();
-     return false;
-   });
+  $('.box').click(cardFlip);
+
+
+
 
 var cookieTwo = {
   element: $('#cookie2'),
