@@ -1,75 +1,78 @@
-$('.cookie1').click(function() {
-  $('.cookie1').toggle();
+
+$(document).ready(function(){
+  $(".cookie1").click(function(){
+    $(".cookie1").hide();
+  });
 });
 
-$('.cookie2').click(function() {
-  $('.cookie2').toggle();
+$(document).ready(function(){
+  $(".cookie2").click(function(){
+    $(".cookie2").hide();
+  });
 });
 
-$('.cookie3').click(function() {
-  $('.cookie3').toggle();
+$(document).ready(function(){
+  $(".cookie3").click(function(){
+    $(".cookie3").hide();
+  });
 });
 
-$('.cookie4').click(function() {
-  $('.cookie4').toggle();
+$(document).ready(function(){
+  $(".cookie4").click(function(){
+    $(".cookie4").hide();
+  });
 });
 
-$('.cookie5').click(function() {
-  $('.cookie5').toggle();
+$(document).ready(function(){
+  $(".cookie5").click(function(){
+    $(".cookie5").hide();
+  });
 });
 
-$('.cookie6').click(function() {
-  $('.cookie6').toggle();
+$(document).ready(function(){
+  $(".cookie6").click(function(){
+    $(".cookie6").hide();
+  });
 });
 
-$('.cookie7').click(function() {
-  $('.cookie7').toggle();
+$(document).ready(function(){
+  $(".cookie7").click(function(){
+    $(".cookie7").hide();
+  });
 });
 
-$('.cookie8').click(function() {
-  $('.cookie8').toggle();
+$(document).ready(function(){
+  $(".cookie8").click(function(){
+    $(".cookie8").hide();
+  });
 });
 
-$('.cookie9').click(function() {
-  $('.cookie9').toggle();
+$(document).ready(function(){
+  $(".cookie9").click(function(){
+    $(".cookie9").hide();
+  });
 });
 
+    var monster = {
+      element: $('#blue-monster'),
+      position: 0
 
+    };
 
+    var moveMonster = function(e) {
+      // does the event key property equal left?
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        monster.position -= 10;
+        monster.element.css("left", monster.position + "px");
+        console.log("moveMonster");
+      } else if (e.key === 'ArrowRight') {
+          e.preventDefault();
+          monster.position += 10;
+          monster.element.css("left", monster.position + "px");
+          console.log('moveMonster right')
+      }
+    };
 
-var cookieOne = {
-  element: $('#cookie1'),
-  position: 0
-}
-
-  $('.box').click(cardFlip);
-
-
-
-
-var cookieTwo = {
-  element: $('#cookie2'),
-  position: 0
-};
-
-var monster = {
-  element: $('#blue-monster'),
-  position: 0
-};
-
-var moveMonster = function(e) {
-  // does the event key property equal left?
-  if (e.key === 'ArrowLeft') {
-    e.preventDefault();
-    monster.position -= 15;
-    monster.element.css("left", monster.position + "px");
-    console.log("moveMonster");
-  } else if (e.key === 'ArrowRight') {
-      e.preventDefault();
-      monster.position += 15;
-      monster.element.css("left", monster.position + "px");
-      console.log('moveMonster right')
-  }
-};
-
-$(window).keydown(moveMonster);
+    // $(window).on('keydown', moveMonster);
+    $(window).keydown(moveMonster);

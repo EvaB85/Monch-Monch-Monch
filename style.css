@@ -15,7 +15,8 @@ h1 {
   color: #0c59a8;
 }
 
-.cookie1, .cookie2, .cookie3, .cookie4, .cookie5, .cookie6, .cookie7, .cookie8, .cookie9 {
+.cookie1, .cookie2, .cookie3, .cookie4, .cookie5, .cookie6, .cookie7, .cookie8, .cookie9, .cookie10,
+.cookie11, .cookie12, .cookie13, .cookie14, .cookie15, .cookie16, .cookie17, .cookie18, .cookie19, .cookie20 {
   position: absolute;
   border: black solid;
   box-shadow: 10px 10px;
@@ -32,6 +33,7 @@ h1 {
   width: 80px;
   background: red;
   animation-delay: 4.2s;
+  border-radius: 50%;
 }
 
 .cookie2 {
@@ -40,6 +42,7 @@ h1 {
   width: 80px;
   background: orange;
   animation-delay: 7.5s;
+  border-radius: 50%;
 }
 
 .cookie3 {
@@ -48,6 +51,7 @@ h1 {
   width: 80px;
   background: yellow;
   animation-delay: 8.3s;
+  border-radius: 50%;
 
 }
 
@@ -57,6 +61,7 @@ h1 {
   width: 80px;
   background: green;
   animation-delay: 1.7s;
+  border-radius: 50%;
 }
 
 .cookie5 {
@@ -65,6 +70,7 @@ h1 {
   width: 80px;
   background: blue;
   animation-delay: 3.2s;
+  border-radius: 50%;
 }
 
 .cookie6 {
@@ -73,6 +79,7 @@ h1 {
   width: 80px;
   background: purple;
   animation-delay: 2.9s;
+  border-radius: 50%;
 }
 
 .cookie7 {
@@ -81,6 +88,7 @@ h1 {
   width: 80px;
   background: white;
   animation-delay: 5.1s;
+  border-radius: 50%;
 }
 .cookie8 {
   left: 85vw;
@@ -88,31 +96,131 @@ h1 {
   width: 80px;
   background: black;
   animation-delay: 4.2s;
+  border-radius: 50%;
 }
 .cookie9 {
-  left: 95vw;
+  left: 25vw;
   height: 80px;
   width: 80px;
-  background: pink;
+  background: limegreen;
+  animation-delay: 3.5s;
+  border-radius: 50%;
+}
+
+.cookie10 {
+  left: 45vw;
+  height: 80px;
+  width: 80px;
+  background: rebeccapurple;
+  animation-delay: 9.5s;
+  border-radius: 50%;
+}
+
+.cookie11 {
+  left: 25vw;
+  height: 60px;
+  width: 60px;
+  background: #71d1d4;
+  animation-delay: 4.5s;
+  border-radius: 50%;
+}
+.cookie12 {
+  left: 65vw;
+  height: 80px;
+  width: 80px;
+  background: #c1bf0d;
   animation-delay: 6.5s;
+  border-radius: 50%;
+}
+.cookie13 {
+  left: 85vw;
+  height: 80px;
+  width: 80px;
+  background: #50dedf;
+  animation-delay: 2.5s;
+  border-radius: 50%;
+}
+.cookie14 {
+  left: 99vw;
+  height: 80px;
+  width: 80px;
+  background: #1f9de8;
+  animation-delay: 5.5s;
+  border-radius: 50%;
+}
+.cookie15 {
+  left: 15vw;
+  height: 90px;
+  width: 90px;
+  background: #b863c6;
+  animation-delay: 8.5s;
+  border-radius: 50%;
+}
+.cookie16 {
+  left: 28vw;
+  height: 90px;
+  width: 90px;
+  background: #143b5b;
+  animation-delay: 6.5s;
+  border-radius: 50%;
+}
+.cookie17 {
+  left: 62vw;
+  height: 80px;
+  width: 80px;
+  background: #e2408a;
+  animation-delay: 9.5s;
+  border-radius: 50%;
+}
+.cookie18 {
+  left: 74vw;
+  height: 80px;
+  width: 80px;
+  background: #e88555;
+  animation-delay: 4.5s;
+  border-radius: 50%;
+}
+.cookie19 {
+  left: 44vw;
+  height: 70px;
+  width: 70px;
+  background: #ffa4e7;
+  animation-delay: 3.5s;
+  border-radius: 50%;
+}
+.cookie20 {
+  left: 77vw;
+  height: 60px;
+  width: 60px;
+  background: #aec8cc;
+  animation-delay: 7.5s;
+  border-radius: 50%;
 }
 
 
 .blue-monster {
   user-select: none;
-  background: lightblue;
+  background: none;
   height: 150px;
   width: 150px;
   position: relative;
   /* right: -50px; */
-
 }
 
 .blue-monster-main {
   user-select: none;
-  background: plum;
-  height: 250px;
-  width: 250px;
+  background: none;
+  height: 380px;
+  width: 380px;
+}
+
+.oscar {
+  user-select: none;
+  background: none;
+  height: 380px;
+  width: 380px;
+  right: -825px;
+  position: relative;
 }
 
 @keyframes fall {
