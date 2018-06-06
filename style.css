@@ -19,14 +19,16 @@ h1 {
 .cookie11, .cookie12, .cookie13, .cookie14, .cookie15, .cookie16, .cookie17, .cookie18, .cookie19, .cookie20 {
   position: absolute;
   border: black solid;
-  box-shadow: 10px 10px;
-  top: -5vh;
+  box-shadow: 10px 10px 4px rgba(0,0,0,.8);
+  top: 25vh;
   left: 0px;
-  animation: fall 10s infinite linear;
+  bottom: -15vh;
+  animation: fall 5s infinite linear;
 }
 
 .cookie1 {
   position: absolute;
+  padding: none;
   /* top: 15vh; */
   left: 15vw;
   height: 80px;
@@ -197,7 +199,7 @@ h1 {
   border-radius: 50%;
 }
 
-.score {
+.score-board {
   width: 25em;
   height: 5em;
   /* 7d6439 bbb25e*/
@@ -209,7 +211,7 @@ h1 {
   margin-bottom: 10em;
 }
 
-p {
+.score-text {
   font-size: 3em;
   color: white;
   position: relative;

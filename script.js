@@ -17,13 +17,17 @@ $(document).ready(function(){
   });
   $(".s").click(function(){
     $(this).hide();
-    score++
+    score++;
     // console.log(score)
-    $('p').text(function(index){
-      return (score + 1);
-    });
+    $('.points').text(score);
+    console.log('here is score: ', score);
   });
 });
+
+// $('.score-text').text('YOUR SCORE: ' + score + );
+// $('.score-text').text('YOUR SCORE: ' + score + );
+
+
 
 
 // $(document).ready(function(){
