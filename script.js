@@ -27,7 +27,9 @@ $(document).ready(function(){
 // look at notes below
 
 
-
+$("#fade").modal({
+ fadeDuration: 100
+});
 
 
 
