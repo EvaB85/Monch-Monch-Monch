@@ -15,6 +15,7 @@ h1 {
   color: #0c59a8;
 }
 
+
 .cookie1, .cookie2, .cookie3, .cookie4, .cookie5, .cookie6, .cookie7, .cookie8, .cookie9, .cookie10,
 .cookie11, .cookie12, .cookie13, .cookie14, .cookie15, .cookie16, .cookie17, .cookie18, .cookie19, .cookie20 {
   position: absolute;
@@ -23,7 +24,7 @@ h1 {
   top: 25vh;
   left: 0px;
   bottom: -15vh;
-  animation: fall 5s infinite linear;
+  animation: fall 15s infinite linear;
 }
 
 .cookie1 {
@@ -218,6 +219,15 @@ h1 {
   margin-top: -.02em;
 }
 
+/* .timer-thirty {
+  background: #ebd46e;
+  height: 70px;
+  width: 250px;
+  color: white;
+  border: solid black;
+  font-size: 28px;
+  position: relative;
+} */
 
 .blue-monster {
   user-select: none;
@@ -243,6 +253,30 @@ h1 {
   right: -825px;
   position: relative;
 }
+
+.directions {
+  background: #0b4a3c;
+  font-size: 25px;
+  color: white;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 30%;
+  height: 40%;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  font-family: 'Rokkitt', serif;
+  word-spacing: 2px;
+  line-height: 2;
+  box-shadow: 10px 10px 4px rgba(0,0,0,.8);
+
+}
+
+
+
+
 
 @keyframes fall {
   0 {

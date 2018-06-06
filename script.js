@@ -24,59 +24,19 @@ $(document).ready(function(){
   });
 });
 
-// $('.score-text').text('YOUR SCORE: ' + score + );
-// $('.score-text').text('YOUR SCORE: ' + score + );
+// look at notes below
 
 
 
 
-// $(document).ready(function(){
-//   $(".cookie2").click(function(){
-//     $(".cookie2").hide();
-//   });
-// });
-//
-// $(document).ready(function(){
-//   $(".cookie3").click(function(){
-//     $(".cookie3").hide();
-//   });
-// });
-//
-// $(document).ready(function(){
-//   $(".cookie4").click(function(){
-//     $(".cookie4").hide();
-//   });
-// });
-//
-// $(document).ready(function(){
-//   $(".cookie5").click(function(){
-//     $(".cookie5").hide();
-//   });
-// });
-//
-// $(document).ready(function(){
-//   $(".cookie6").click(function(){
-//     $(".cookie6").hide();
-//   });
-// });
-//
-// $(document).ready(function(){
-//   $(".cookie7").click(function(){
-//     $(".cookie7").hide();
-//   });
-// });
-//
-// $(document).ready(function(){
-//   $(".cookie8").click(function(){
-//     $(".cookie8").hide();
-//   });
-// });
-//
-// $(document).ready(function(){
-//   $(".cookie9").click(function(){
-//     $(".cookie9").hide();
-//   });
-// });
+
+
+// look above at notes
+
+
+
+
+
 
     var monster = {
       element: $('#blue-monster'),
