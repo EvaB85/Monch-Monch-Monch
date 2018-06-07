@@ -34,6 +34,10 @@ var startTimer = function () {
   var timer = setInterval(function() {
     remainingTime--;
     $('.timer span').text(remainingTime);
+    if (remainingTime <= 0) {
+      clearInterval(timer);
+      console.log(clearInterval);
+    };
   }, 1000);
 };
 
