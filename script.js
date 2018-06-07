@@ -3,6 +3,8 @@ var score = 0;
 var cookies = [];
 var remainingTime = 10;
 
+$('.s').css('visibility', 'visible');
+
 // get document ready
 // run function for each cookie
 // recieve one point per user's click
@@ -17,7 +19,12 @@ $(document).ready(function(){
 });
 
 var endGame = function() {
-  console.log('HEY this is the end!');
+  if (score >= 10) {
+    console.log("YOU WIN!");
+  } else {
+  console.log("YOU'RE A LOSER!")
+  }
+  // console.log('HEY this is the end!');
 };
 
 // function that starts timer
@@ -37,7 +44,7 @@ var startTimer = function () {
 // function to call startTimer
 var startGame = function () {
   startTimer()
-    $('.start-button').remove();
+    $('.start-button').css('visibility', 'hidden');
   };
 
 // starts game
@@ -49,6 +56,19 @@ $('.start-button').click(startGame);
       element: $('#blue-monster'),
       position: 0
     };
+
+
+// reset game function
+var resetGame = function(){
+  $('.start-button').css('visibility', 'visible');
+  remainingTime = 10;
+  $('.s').show();
+  // cookies to start falling
+  console.log("reset Game!");
+};
+
+$('.reset-button').click(resetGame);
+
 
 
 

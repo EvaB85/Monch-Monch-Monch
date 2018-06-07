@@ -1,7 +1,7 @@
 body {
     background-image: url("file:///Users/evabarrett/coding/Unit1/week-two/Monch-Monch-Monch-/images/brick-gray.jpg");
     background-repeat: repeat-y repeat-x;
-    margin-top: 25em;
+    /* margin-top: 25em; */
 }
 
 h1 {
@@ -300,27 +300,34 @@ h1 {
 }
 .start-button {
   position: absolute;
-  margin-top: 5em;
-  margin-left: 50px;
+  top: 15em;
+  left: 30px;
   font-size: 3em;
   /* visibility: hidden;    add to my js*/
 }
 
-.timer {
+.reset-button {
   position: absolute;
+  top: 5em;
+  left: 50px;
+  font-size: 3em;
+}
+
+.timer {
+  position: relative;
   color: white;
   font-size: 50px;
   background: #244571;
   border: solid black;
   border-radius: 70px;
-  margin-top: 11em;
+  top: 11em;
 }
 
 .score-text {
   font-size: 3em;
   color: white;
   position: relative;
-  margin-top: -.02em;
+  top: -.02em;
 }
 
 
