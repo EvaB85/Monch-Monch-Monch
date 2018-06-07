@@ -1,33 +1,24 @@
+// gloabl variables
 var score = 0;
 var cookies = [];
-var remainingTime = 30;
+var remainingTime = 10;
 
-
+// get document ready
+// run function for each cookie
+// recieve one point per user's click
 $(document).ready(function(){
   $.each($('.s'), function(){
-
-    // .cookie1 {
-    //   position: absolute;
-    //   /* top: 15vh; */
-    //   left: 15vw;
-    //   height: 80px;
-    //   width: 80px;
-    //   background: red;
-    //   animation-delay: 4.2s;
-    //   border-radius: 50%;
-    // }
-
-  // adddddd notes
-  });
+});
   $(".s").click(function(){
     $(this).hide();
-    score++;
-    // console.log(score)
+      score++;
     $('.points').text(score);
-    console.log('here is score: ', score);
-  });
+    });
 });
 
+var endGame = function() {
+  console.log('HEY this is the end!');
+};
 
 // function that starts timer
 var startTimer = function () {
@@ -36,7 +27,8 @@ var startTimer = function () {
     $('.timer span').text(remainingTime);
     if (remainingTime <= 0) {
       clearInterval(timer);
-      console.log(clearInterval);
+      // console.log(clearInterval);
+      endGame();
     };
   }, 1000);
 };
@@ -48,34 +40,22 @@ var startGame = function () {
     $('.start-button').remove();
   };
 
+// starts game
 $('.start-button').click(startGame);
 
 
-
-
-
-// look at notes below
-//
-//
-// $("#fade").modal({
-//  fadeDuration: 100
-// });
-
-
-
-// look above at notes
-
-
-
-
-
-
+// blue-monster's position set to zero
     var monster = {
       element: $('#blue-monster'),
       position: 0
-
     };
 
+
+
+
+
+// Original game idea, old code may remove, haven't decided yet
+// function that allows user to move blue-monster to move left and right
     var moveMonster = function(e) {
       // does the event key property equal left?
       console.log("move monster function")
@@ -94,3 +74,16 @@ $('.start-button').click(startGame);
 
     // $(window).on('keydown', moveMonster);
     $(window).keydown(moveMonster);
+
+
+    // if time permits, use array to clean up css for each cookie
+        // .cookie1 {
+        //   position: absolute;
+        //   /* top: 15vh; */
+        //   left: 15vw;
+        //   height: 80px;
+        //   width: 80px;
+        //   background: red;
+        //   animation-delay: 4.2s;
+        //   border-radius: 50%;
+        // }
