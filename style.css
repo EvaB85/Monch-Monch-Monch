@@ -25,6 +25,7 @@ h1 {
   left: 0px;
   bottom: -15vh;
   animation: fall 15s infinite linear;
+  z-index: 20;
 }
 
 .cookie1 {
@@ -248,10 +249,20 @@ h1 {
 .oscar {
   user-select: none;
   background: none;
-  height: 380px;
-  width: 380px;
-  right: -825px;
+  width: 300px;
+  left: 800px;
   position: relative;
+}
+
+.timer {
+  background: black;
+  color: white;
+  font-size: 50px;
+}
+
+.start-button {
+  margin-left: 50px;
+  font-size: 3em;
 }
 
 .directions {
@@ -271,7 +282,6 @@ h1 {
   word-spacing: 2px;
   line-height: 2;
   box-shadow: 10px 10px 4px rgba(0,0,0,.8);
-
 }
 
 
@@ -283,6 +293,6 @@ h1 {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(150vh);
+    transform: translateY(200vh);
   }
 }

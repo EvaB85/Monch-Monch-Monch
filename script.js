@@ -1,5 +1,6 @@
 var score = 0;
 var cookies = [];
+var remainingTime = 30;
 
 $(document).ready(function(){
   $.each($('.s'), function(){
@@ -14,6 +15,8 @@ $(document).ready(function(){
     //   animation-delay: 4.2s;
     //   border-radius: 50%;
     // }
+
+  // adddddd notes
   });
   $(".s").click(function(){
     $(this).hide();
@@ -24,12 +27,33 @@ $(document).ready(function(){
   });
 });
 
+
+// function that starts timer
+var startTimer = function () {
+  var timer = setInterval(function() {
+    remainingTime--;
+    $('.timer span').text(remainingTime);
+  }, 1000);
+};
+
+
+// function to call startTimer
+var startGame = function () {
+  startTimer();
+};
+
+$('.start-button').click(startGame);
+
+
+
+
+
 // look at notes below
-
-
-$("#fade").modal({
- fadeDuration: 100
-});
+//
+//
+// $("#fade").modal({
+//  fadeDuration: 100
+// });
 
 
 
@@ -48,16 +72,17 @@ $("#fade").modal({
 
     var moveMonster = function(e) {
       // does the event key property equal left?
+      console.log("move monster function")
       if (e.key === 'ArrowLeft') {
         e.preventDefault();
         monster.position -= 10;
         monster.element.css("left", monster.position + "px");
         console.log("moveMonster");
       } else if (e.key === 'ArrowRight') {
-          e.preventDefault();
-          monster.position += 10;
-          monster.element.css("left", monster.position + "px");
-          console.log('moveMonster right')
+        e.preventDefault();
+        monster.position += 10;
+        monster.element.css("left", monster.position + "px");
+        console.log('moveMonster right')
       }
     };
 
