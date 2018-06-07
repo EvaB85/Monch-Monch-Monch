@@ -263,6 +263,7 @@ h1 {
 .start-button {
   margin-left: 50px;
   font-size: 3em;
+  /* visibility: hidden;    add to my js*/
 }
 
 .directions {

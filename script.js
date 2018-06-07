@@ -2,6 +2,7 @@ var score = 0;
 var cookies = [];
 var remainingTime = 30;
 
+
 $(document).ready(function(){
   $.each($('.s'), function(){
 
@@ -39,8 +40,9 @@ var startTimer = function () {
 
 // function to call startTimer
 var startGame = function () {
-  startTimer();
-};
+  startTimer()
+    $('.start-button').remove();
+  };
 
 $('.start-button').click(startGame);
 
