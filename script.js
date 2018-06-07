@@ -61,6 +61,8 @@ $('.start-button').click(startGame);
 // reset game function
 var resetGame = function(){
   $('.start-button').css('visibility', 'visible');
+  score = 0;
+  $('.points').text(score);
   remainingTime = 10;
   $('.s').show();
   // cookies to start falling
