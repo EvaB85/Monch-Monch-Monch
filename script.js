@@ -34,6 +34,37 @@ var endGame = function() {
 var startTimer = function () {
   $('.s').show();
   $('.s').css("animation", "fall 15s infinite linear");
+// add animation for cookies to fall at different times and speed
+$('.cookie1').css("animation-delay", "1.1s").css("animation", "fall 7s infinite linear");
+$('.cookie2').css("animation-delay", "3.3s").css("animation", "fall 8s infinite linear");
+$('.cookie3').css("animation-delay", "2.2s").css("animation", "fall 10s infinite linear");
+$('.cookie4').css("animation-delay", "2.3s").css("animation", "fall 6s infinite linear");
+$('.cookie5').css("animation-delay", "3.2s").css("animation", "fall 12s infinite linear");
+$('.cookie6').css("animation-delay", "4.5s").css("animation", "fall 5s infinite linear");
+$('.cookie7').css("animation-delay", "3.3s").css("animation", "fall 6s infinite linear");
+$('.cookie8').css("animation-delay", "1.2s").css("animation", "fall 7s infinite linear");
+$('.cookie9').css("animation-delay", "2.1s").css("animation", "fall 4s infinite linear");
+$('.cookie10').css("animation-delay", "3.1s").css("animation", "fall 3s infinite linear");
+$('.cookie11').css("animation-delay", "2.2s").css("animation", "fall 7s infinite linear");
+$('.cookie12').css("animation-delay", "3.3s").css("animation", "fall 8s infinite linear");
+$('.cookie13').css("animation-delay", "1.22s").css("animation", "fall 3s infinite linear");
+$('.cookie14').css("animation-delay", "3.5s").css("animation", "fall 5s infinite linear");
+$('.cookie15').css("animation-delay", "2.3s").css("animation", "fall 3s infinite linear");
+$('.cookie16').css("animation-delay", "2.4s").css("animation", "fall 4s infinite linear");
+$('.cookie17').css("animation-delay", "2.3s").css("animation", "fall 5s infinite linear");
+$('.cookie18').css("animation-delay", "3.1s").css("animation", "fall 7s infinite linear");
+$('.cookie19').css("animation-delay", "2.3s").css("animation", "fall 8s infinite linear");
+$('.cookie20').css("animation-delay", "1.1s").css("animation", "fall 9s infinite linear");
+
+
+
+
+
+
+
+
+
+
   var timer = setInterval(function() {
     remainingTime--;
     $('.timer span').text(remainingTime);
@@ -51,7 +82,7 @@ var startTimer = function () {
 var startGame = function () {
   startTimer()
     $('.start-button').css('visibility', 'hidden');
-
+    $('.play-again').css('visibility', 'hidden');
     // NEEDS TO WORK BROKEN....
     $('.image').css('background-image', cookieImage);
   };

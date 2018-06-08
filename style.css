@@ -284,24 +284,26 @@ h1 {
   font-size: 25px;
   color: white;
   display: block;
+  text-align: center;
   margin-left: auto;
   margin-right: auto;
   width: 30%;
   height: 40%;
   padding-left: 2em;
   padding-right: 2em;
-  padding-top: 1em;
+  /* padding-top: .5em; */
   padding-bottom: 1em;
   font-family: 'Rokkitt', serif;
   word-spacing: 2px;
   line-height: 2;
   box-shadow: 10px 10px 4px rgba(0,0,0,.8);
   z-index: 155;
+  
 }
 .start-button {
   position: absolute;
-  top: 15em;
-  left: 30px;
+  top: 29em;
+  left: 800px;
   font-size: 3em;
   /* visibility: hidden;    add to my js*/
 }
@@ -340,17 +342,19 @@ h1 {
 
 .score-board {
   width: 25em;
-  height: 5em;
+  height: 1.3em;
   /* 7d6439 bbb25e*/
   background: #7d6439;
   opacity: 0.8;
   border-radius: 75px;
   position: relative;
   border: solid black;
-  margin-top: 15em;
   left: 1200px;
   word-wrap: break-word;
   box-shadow: 10px 10px 4px rgba(0,0,0,.8);
+
+  color: white;
+  font-size: 50px;
 }
 
 /* .timer-thirty {
