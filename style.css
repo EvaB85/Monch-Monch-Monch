@@ -27,7 +27,7 @@ h1 {
   top: 100vh;
   left: 0px;
   /* bottom: -15vh; */
-  animation: fall 15s infinite linear;
+  /* animation: fall 15s infinite linear; */
   z-index: 20;
 }
 
@@ -211,7 +211,7 @@ h1 {
   top: 100vh;
   left: 0px;
   /* bottom: -15vh; */
-  animation: fall 15s infinite linear;
+  /* animation: fall 15s infinite linear; */
   z-index: 20;
 }
 

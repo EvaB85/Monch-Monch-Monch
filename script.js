@@ -2,6 +2,8 @@
 var score = 0;
 var cookies = [];
 var remainingTime = 10;
+// var cookieImage = src="images/cookie-monster-empty.png"
+
 
 $('.s').css('visibility', 'visible');
 
@@ -9,6 +11,7 @@ $('.s').css('visibility', 'visible');
 // run function for each cookie
 // recieve one point per user's click
 $(document).ready(function(){
+  $('.s').hide();
   $.each($('.s'), function(){
 });
   $(".s").click(function(){
@@ -29,6 +32,8 @@ var endGame = function() {
 
 // function that starts timer
 var startTimer = function () {
+  $('.s').show();
+  $('.s').css("animation", "fall 15s infinite linear");
   var timer = setInterval(function() {
     remainingTime--;
     $('.timer span').text(remainingTime);
@@ -45,6 +50,9 @@ var startTimer = function () {
 var startGame = function () {
   startTimer()
     $('.start-button').css('visibility', 'hidden');
+
+    // NEEDS TO WORK BROKEN....
+    $('.image').css('background-image', cookieImage);
   };
 
 // starts game
