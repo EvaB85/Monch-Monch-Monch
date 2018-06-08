@@ -15,7 +15,7 @@ h1 {
   color: #0c59a8;
   z-index: 50;
   /*need to place title infront  */
-  margin-top: -1.5em;
+  margin-top: 1em;
 }
 
 
@@ -308,25 +308,32 @@ h1 {
 
 .play-again {
   position: absolute;
-  top: 5em;
-  left: 50px;
+  top: 42em;
+  left: 1350px;
   font-size: 3em;
+  z-index: 10
 }
 
 .timer {
   position: relative;
+  width: 6.5em;
+  height: 3.5em;
+  padding: .2em;
+  text-align: center;
   color: white;
   font-size: 50px;
   background: #244571;
   border: solid black;
-  border-radius: 70px;
+  border-radius: 65px;
   top: 11em;
+  word-wrap: break-word;
+  box-shadow: 10px 10px 4px rgba(0,0,0,.8);
 }
 
 .score-text {
-  font-size: 3em;
+  position: absolute;
   color: white;
-  position: relative;
+  font-size: 50px;
   top: -.02em;
 }
 
@@ -342,6 +349,8 @@ h1 {
   border: solid black;
   margin-top: 15em;
   left: 1200px;
+  word-wrap: break-word;
+  box-shadow: 10px 10px 4px rgba(0,0,0,.8);
 }
 
 /* .timer-thirty {
