@@ -1,7 +1,7 @@
 // gloabl variables
 var score = 0;
 var cookies = [];
-var remainingTime = 10;
+var remainingTime = 30;
 // var cookieImage = src="images/cookie-monster-empty.png"
 
 
@@ -25,7 +25,7 @@ var endGame = function() {
   if (score >= 10) {
     console.log("YOU WIN!");
   } else {
-  console.log("YOU'RE A LOSER!")
+  console.log("TRY AGAIN!")
   }
   // console.log('HEY this is the end!');
 };
@@ -39,6 +39,7 @@ var startTimer = function () {
     $('.timer span').text(remainingTime);
     if (remainingTime <= 0) {
       clearInterval(timer);
+      $('.s').hide();
       // console.log(clearInterval);
       endGame();
     };
@@ -71,13 +72,13 @@ var resetGame = function(){
   $('.start-button').css('visibility', 'visible');
   score = 0;
   $('.points').text(score);
-  remainingTime = 10;
-  $('.s').show();
+  remainingTime = 30;
+  // $('.s').show();
   // cookies to start falling
   console.log("reset Game!");
 };
 
-$('.reset-button').click(resetGame);
+$('.play-again').click(resetGame);
 
 
 
