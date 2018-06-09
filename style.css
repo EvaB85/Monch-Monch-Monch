@@ -335,14 +335,14 @@ h1 {
 .score-text {
   position: absolute;
   color: white;
-  font-size: 50px;
+  /* font-size: 50px; */
   top: -.02em;
 }
 
 
 .score-board {
-  width: 25em;
-  height: 1.3em;
+  /* width: 25em;
+  height: 1.3em; */
   /* 7d6439 bbb25e*/
   background: #7d6439;
   opacity: 0.8;

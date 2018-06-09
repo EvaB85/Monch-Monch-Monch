@@ -1,11 +1,9 @@
 // gloabl variables
 var score = 0;
-var cookies = [];
+var fallingImages = $('.falling');
 var remainingTime = 30;
+var fallSpeed = 10;
 // var cookieImage = src="images/cookie-monster-empty.png"
-
-
-$('.falling').css('visibility', 'visible');
 
 // get document ready
 // run function for each cookie
@@ -37,10 +35,16 @@ var endGame = function() {
 // function that starts timer
 var startTimer = function () {
   $('.falling').show();
-  // $('.s').css("animation", "fall 15s infinite linear");
-// add animation for cookies to fall at different times and speed
-$('.cookie1').css('animation', 'fall ' + randomNum(12) + 's infinite linear');
+  // $('.cookie1').css('animation', 'fall ' + randomNum(12) + 's infinite linear');
+  // for (let i = 0; i < fallingImages.length; i++) {
+    // console.log(fallingImages[i]);
+    // fallingImages[i].css('animation', 'fall ' + randomNum(12) + 's infinite linear');
+  // };
 
+  // function that loops over every falling image
+  fallingImages.each(function() {
+    $(this).css('animation', 'fall ' + randomNum(fallSpeed) + 's infinite linear');
+  });
   var timer = setInterval(function() {
     remainingTime--;
     $('.timer span').text(remainingTime);
@@ -49,6 +53,7 @@ $('.cookie1').css('animation', 'fall ' + randomNum(12) + 's infinite linear');
       $('.falling').hide();
       // console.log(clearInterval);
       endGame();
+      $('.play-again').css('visibility', 'visible');
     };
   }, 1000);
 };
@@ -61,7 +66,7 @@ var startGame = function () {
     $('.start-button').css('visibility', 'hidden');
     $('.play-again').css('visibility', 'hidden');
     // NEEDS TO WORK BROKEN....
-    $('.image').css('background-image', cookieImage);
+    // $('.image').css('background-image', cookieImage);
   };
 
 // starts game
