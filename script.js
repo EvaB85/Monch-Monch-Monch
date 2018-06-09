@@ -2,7 +2,7 @@
 var score = 0;
 var fallingImages = $('.falling');
 var remainingTime = 30;
-var fallSpeed = 10;
+var fallSpeed = 30;
 // var cookieImage = src="images/cookie-monster-empty.png"
 
 // get document ready
@@ -26,6 +26,7 @@ var randomNum = function(max) {
 var endGame = function() {
   if (score >= 10) {
     console.log('YOU WIN!');
+    $('.blue-monster').addClass('monster-jump');
   } else {
   console.log('TRY AGAIN!')
   }

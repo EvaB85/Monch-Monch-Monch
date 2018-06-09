@@ -18,6 +18,9 @@ h1 {
   margin-top: 1em;
 }
 
+button {
+  z-index: 50;
+}
 
 .cookie1, .cookie2, .cookie3, .cookie4, .cookie5, .cookie6, .cookie7, .cookie8, .cookie9, .cookie10,
 .cookie11, .cookie12, .cookie13, .cookie14, .cookie15, .cookie16, .cookie17, .cookie18, .cookie19, .cookie20 {
@@ -332,29 +335,24 @@ h1 {
   box-shadow: 10px 10px 4px rgba(0,0,0,.8);
 }
 
-.score-text {
-  position: absolute;
-  color: white;
-  /* font-size: 50px; */
-  top: -.02em;
-}
-
-
 .score-board {
-  /* width: 25em;
-  height: 1.3em; */
-  /* 7d6439 bbb25e*/
+  display: inline-block;
   background: #7d6439;
-  opacity: 0.8;
+  opacity: 0.9;
   border-radius: 75px;
   position: relative;
   border: solid black;
   left: 1200px;
   word-wrap: break-word;
   box-shadow: 10px 10px 4px rgba(0,0,0,.8);
-
   color: white;
   font-size: 50px;
+  padding: .3em;
+}
+
+.score-board p {
+  margin: 0;
+  padding: 0;
 }
 
 /* .timer-thirty {
@@ -388,9 +386,31 @@ h1 {
   background: none;
   width: 300px;
   left: 800px;
-  position: relative;
+  position: absolute;
 }
 
+.monster-jump {
+  transform-origin: bottom right;
+  animation: jump 1.5s infinite;
+}
+
+/* @keyframes jump {
+  25% {
+    transform: translate(-5px, -20px) rotate(-10deg);
+  }
+  50% {
+    transform: translate(0) rotate(0deg);
+  }
+  75% {
+    transform: translate(5px, -20px) rotate(10deg);
+  }
+} */
+
+/* @keyframes jump {
+  75% {
+    transform: rotate(35deg);
+  }
+} */
 
 @keyframes fall {
   0 {
