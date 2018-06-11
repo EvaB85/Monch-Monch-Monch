@@ -13,46 +13,54 @@
   <body>
     <audio id="pickup-sound" src="sounds/sounds/Pickup_Coin31.bfxrsound">AUDIO ON OFF</audio>
     <h1>MONCH! MONCH! MONCH!</h1>
-    <div class="timer">TIME REMAINING: 0:<span>30</span></div>
-    <button class="start-button">Start</button>
-    <button class="play-again">PLAY AGAIN</button>
-    <p class="directions">Directions: Help Cookie Monster collect all the cookies in under 30 seconds. Text here more text here
-      more text here text here more text here add more text here text here add text to make this box larger</p>
-
-    <img class="falling cookie1" src="images/cookie.png" alt="cookie">
-    <img class="falling cookie2" src="images/cookie.png" alt="cookie">
-    <img class="falling cookie3" src="images/cookie.png" alt="cookie">
-    <img class="falling cookie4" src="images/cookie.png" alt="cookie">
-    <img class="falling cookie5" src="images/cookie.png" alt="cookie">
-    <img class="falling cookie6" src="images/cookie.png" alt="cookie">
-    <img class="falling cookie7" src="images/cookie.png" alt="cookie">
-    <img class="falling cookie8" src="images/cookie.png" alt="cookie">
-    <img class="falling cookie9" src="images/cookie.png" alt="cookie">
-    <img class="falling cookie10" src="images/cookie.png" alt="cookie">
-    <img class="falling cookie11" src="images/cookie.png" alt="cookie">
-    <img class="falling cookie12" src="images/cookie.png" alt="cookie">
-    <img class="falling cookie13" src="images/cookie.png" alt="cookie">
-    <img class="falling cookie14" src="images/cookie.png" alt="cookie">
-    <img class="falling cookie15" src="images/cookie.png" alt="cookie">
-    <img class="falling cookie16" src="images/cookie.png" alt="cookie">
-    <img class="falling cookie17" src="images/cookie.png" alt="cookie">
-    <img class="falling cookie18" src="images/cookie.png" alt="cookie">
-    <img class="falling cookie19" src="images/cookie.png" alt="cookie">
-    <img class="falling cookie20" src="images/cookie.png" alt="cookie">
-
-    <img class="falling pepper1" src="images/green-pepper.png" alt="pepper">
-    <img class="falling pepper2" src="images/green-pepper.png" alt="pepper">
-    <img class="falling pepper3" src="images/green-pepper.png" alt="pepper">
-    <img class="falling pepper4" src="images/green-pepper.png" alt="pepper">
-    <img class="falling pepper5" src="images/green-pepper.png" alt="pepper">
-    <img class="falling pepper6" src="images/green-pepper.png" alt="pepper">
-    <img class="falling pepper7" src="images/green-pepper.png" alt="pepper">
-
-
-    <div class="score-board">
-      <p>YOUR SCORE: <span class="points">0</span></p>
+    <div class="img-p-wrapper">
+      <p class="directions">Directions: Help Cookie Monster collect all the cookies in under 30 seconds. Text here more text here
+        more text here text here more text here add more text here text here add text to make this box larger</p>
+    <div class="players">
+      <button id="player-one" class="player-button" type="button">PLAYER 1</button>
+      <p>SCORE: <span class="points1">0</span></p>
+      <button id="player-two" class="player-button" type="button">PLAYER 2</button>
+      <p>SCORE: <span class="points2">0</span></p>
       <!-- <p class='score-text'>YOUR SCORE: <span class='points'>0</span></p> -->
+    <!-- </div>
+    <div class="score-board">
+    delete div-->
     </div>
+    <button class="start-button">Start</button>
+
+      <img class="falling cookie1" src="images/cookie.png" alt="cookie">
+      <img class="falling cookie2" src="images/cookie.png" alt="cookie">
+      <img class="falling cookie3" src="images/cookie.png" alt="cookie">
+      <img class="falling cookie4" src="images/cookie.png" alt="cookie">
+      <img class="falling cookie5" src="images/cookie.png" alt="cookie">
+      <img class="falling cookie6" src="images/cookie.png" alt="cookie">
+      <img class="falling cookie7" src="images/cookie.png" alt="cookie">
+      <img class="falling cookie8" src="images/cookie.png" alt="cookie">
+      <img class="falling cookie9" src="images/cookie.png" alt="cookie">
+      <img class="falling cookie10" src="images/cookie.png" alt="cookie">
+      <img class="falling cookie11" src="images/cookie.png" alt="cookie">
+      <img class="falling cookie12" src="images/cookie.png" alt="cookie">
+      <img class="falling cookie13" src="images/cookie.png" alt="cookie">
+      <img class="falling cookie14" src="images/cookie.png" alt="cookie">
+      <img class="falling cookie15" src="images/cookie.png" alt="cookie">
+      <img class="falling cookie16" src="images/cookie.png" alt="cookie">
+      <img class="falling cookie17" src="images/cookie.png" alt="cookie">
+      <img class="falling cookie18" src="images/cookie.png" alt="cookie">
+      <img class="falling cookie19" src="images/cookie.png" alt="cookie">
+      <img class="falling cookie20" src="images/cookie.png" alt="cookie">
+
+      <img class="falling pepper1" src="images/green-pepper.png" alt="pepper">
+      <img class="falling pepper2" src="images/green-pepper.png" alt="pepper">
+      <img class="falling pepper3" src="images/green-pepper.png" alt="pepper">
+      <img class="falling pepper4" src="images/green-pepper.png" alt="pepper">
+      <img class="falling pepper5" src="images/green-pepper.png" alt="pepper">
+      <img class="falling pepper6" src="images/green-pepper.png" alt="pepper">
+      <img class="falling pepper7" src="images/green-pepper.png" alt="pepper">
+    </div>
+
+    <button class="play-again">PLAY AGAIN</button>
+
+    <div class="timer">TIME REMAINING: 0:<span>30</span></div>
     <img class="cookie-monster" src="images/cookie-monster-pointing.png" alt="blue-monster">
     <img class="blue-monster barf" id="blue-monster" src="images/blue-monster.png" alt="blue-monster">
     <img class="oscar" src="images/oscar-no-cookies.png">

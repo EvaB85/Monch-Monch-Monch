@@ -3,7 +3,20 @@ var score = 0;
 var fallingImages = $('.falling');
 var remainingTime = 30;
 var fallSpeed = 30;
+var playerPoints = null;
 // var cookieImage = src="images/cookie-monster-empty.png"
+
+$('#player-one').click(function() {
+  score = 0;
+  playerPoints = $('.points1');
+
+});
+
+$('#player-two').click(function() {
+  score = 0;
+  playerPoints = $('.points2');
+});
+
 
 // get document ready
 // run function for each cookie
@@ -15,7 +28,7 @@ $(document).ready(function(){
   $('.falling').click(function(){
     $(this).hide();
       score++;
-    $('.points').text(score);
+    playerPoints.text(score);
     });
 });
 
@@ -85,7 +98,7 @@ $('.start-button').click(startGame);
 var resetGame = function(){
   $('.start-button').css('visibility', 'visible');
   score = 0;
-  $('.points').text(score);
+  playerPoints.text(score);
   remainingTime = 30;
   // $('.s').show();
   // cookies to start falling
