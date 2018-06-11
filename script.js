@@ -1,152 +1,21 @@
 // gloabl variables
-var score = 0;
+var playerTurn = 'one';
+var playerOneScore = 0;
+var playerTwoScore = 0;
 var fallingImages = $('.falling');
-var remainingTime = 5;
-var fallSpeed = 30;
-var playerPoints = null;
-var isGameActive = false;
-
-$('#player-one').click(function() {
-  if (!isGameActive) {
-    score = 0;
-    playerPoints = $('.points1');
-    playerPoints.text('0');
-  }
-});
-
-$('#player-two').click(function() {
-  if (!isGameActive) {
-    score = 0;
-    playerPoints = $('.points2');
-  }
-});
-
-// run function for each cookie
-// recieve one point per user's click
-
-$('.falling').hide();
-$.each($('.falling'), function(){
-
-});
-
-$('.falling.cookie').click(function(){
-  $(this).hide();
-    score++;
-  playerPoints.text(score);
-});
-
-$('.falling.pepper').click(function(){
-  $(this).hide();
-    score--;
-  playerPoints.text(score);
-});
-
-
-var randomNum = function(max) {
-  return Math.ceil(Math.random() * max);
-};
-
-var endGame = function() {
-  if (score >= 10) {
-    console.log('YOU WIN!');
-    $('.blue-monster').addClass('monster-jump');
-  } else {
-  console.log('TRY AGAIN!')
-  }
-  // console.log('HEY this is the end!');
-};
-
-// function that starts timer
-var startTimer = function () {
-  var timer = setInterval(function() {
-    remainingTime--;
-    $('.timer span').text(remainingTime);
-    if (remainingTime <= 0) {
-      clearInterval(timer);
-      $('.falling').hide();
-      // console.log(clearInterval);
-      endGame();
-      $('.play-again').css('visibility', 'visible');
-    };
-  }, 1000);
-};
-
-// var selectBox = function(){
-//   if (playerPoints) {
-//     $('#player-one').click(function() {
-//       $('#player-one').css('color', 'plum');
-//     }
-//   } else {
-//   };
-
-  //
-  // $("button").click(function(){
-  //     $("p").css("color", "red");
-  // });
-
-
-// function to call startTimer
-var startGame = function () {
-  if (playerPoints) {
-    isGameActive = true;
-    startTimer()
-    $('.start-button').css('visibility', 'hidden');
-    $('.play-again').css('visibility', 'hidden');
-    $('.falling').show();
-    // function that loops over every falling image
-    fallingImages.each(function() {
-      $(this).css('animation', 'fall ' + randomNum(fallSpeed) + 's infinite linear');
-    });
-  }
-};
-
-// starts game
-$('.start-button').click(startGame);
-
-// reset game function
-var resetGame = function(){
-  $('.start-button').css('visibility', 'visible');
-  isGameActive = false;
-  score = 0;
-  // playerPoints.text(score);
-  playerPoints = null;
-  remainingTime = 30;
-  // add text to DOM to update time
-};
-
-$('.play-again').click(resetGame);
-
-// var checkEndGame = function () {
-//   if ('#player-one.points1').text === '#player-two.points2').text {
-//     // ADD MODAL PLAYER ONE WINS
-//   } else if () {
-// // ADD MODAL PLAYER TWO WINS
-//   } else () {
-//   // ADD MODAL TIE GAME
-//   }
-// };
-//
-// var checkEndGame = function(){
-//   var b = boxStatus;
-// // check box 1 2 3 checking to see if box status one is not false
-//   if (b.one !== false && b.one === b.two && b.two === b.three){
-//     if (b.one === "X") {
-//       youWinText.textContent = "PLAYER ONE WINS!"
-//       youWinText.style.fontWeight = "bold";
-//       youWinText.style.transform = "scale(1)";
-//       endGame();
-//     } else if (b.one === "O") {
-//       youWinText.textContent = "PLAYER TWO WINS!"
-//       youWinText.style.fontWeight = "bold";
-//       youWinText.style.transform = "scale(1)";
-//       endGame();
-//     };
+var remainingTime = 30;
+var fallSpeed = 15;
+var whichPlayerPointsBox = $('.points1');
 
 var monster = {
   element: $('#blue-monster'),
   position: 0
 };
 
+// hides cookies and peppers to start
+$('.falling').hide();
+
+// lets user move monster
 var moveMonster = function(e) {
   // LEFT
   if (e.key === 'ArrowLeft') {
@@ -161,4 +30,115 @@ var moveMonster = function(e) {
   }
 };
 
+// need player one and two
+
+// run function for each cookie
+// recieve one point per user's click
+$('.falling.cookie').click(function(){
+  $(this).hide();
+  if (playerTurn === 'one') {
+    console.log('anything');
+    playerOneScore++;
+    whichPlayerPointsBox.text(playerOneScore);
+  } else {
+    playerTwoScore++;
+    whichPlayerPointsBox.text(playerTwoScore);
+  };
+});
+
+// run function for each pepper - same as cookie
+$('.falling.pepper').click(function(){
+  $(this).hide();
+  if (playerTurn === 'one') {
+    playerOneScore--;
+    whichPlayerPointsBox.text(playerOneScore);
+  } else {
+    playerTwoScore--;
+    whichPlayerPointsBox.text(playerTwoScore);
+  };
+});
+
+// checks for win only if player two has gone
+var checkForWin = function() {
+  if (playerTurn === 'two') {
+    if (playerOneScore > playerTwoScore) {
+      $('.winner').text('PLAYER ONE WINS!');
+      $('.blue-monster').addClass('monster-jump');
+    } else if (playerOneScore < playerTwoScore) {
+      $('.winner').text('PLAYER TWO WINS!');
+      $('.blue-monster').addClass('monster-jump');
+    } else if (playerOneScore === playerTwoScore) {
+      $('.winner').text('IT\'S A TIE');
+      $('.blue-monster').addClass('monster-jump');
+    }
+  }
+}
+
+// function that starts timer
+var startTimer = function () {
+  var timer = setInterval(function() {
+    remainingTime--;
+    $('.timer span').text(remainingTime);
+    if (remainingTime <= 0) {
+      clearInterval(timer);
+      $('.falling').hide();
+      checkForWin();
+      $('.next-turn').css('visibility', 'visible');
+      $('.reset').css('visibility', 'visible');
+    };
+  }, 1000);
+};
+
+// gets random number for cookie/pepper fall speed
+var randomNum = function(max) {
+  return Math.ceil(Math.random() * max);
+};
+
+// function to call startTimer
+var startGame = function () {
+  if (whichPlayerPointsBox) {
+    startTimer()
+    $('.start-button').css('visibility', 'hidden');
+    $('.next-turn').css('visibility', 'hidden');
+    $('.reset').css('visibility', 'hidden');
+    $('.falling').show();
+    // function that loops over every falling image
+    fallingImages.each(function() {
+      $(this).css('animation', 'fall ' + randomNum(fallSpeed) + 's infinite linear');
+    });
+  }
+};
+
+// second player's turn function
+var nextTurn  = function() {
+  $('.start-button').css('visibility', 'visible');
+  playerTurn = 'two';
+  whichPlayerPointsBox = $('.points2');
+// setting where the points will go on the page DELETE ME DELETE ME!!!!!!!!!!!!!!!!!
+  remainingTime = 30;
+  $('.timer span').text(remainingTime);
+};
+
+// reset game function
+var resetGame = function() {
+  $('.start-button').css('visibility', 'visible');
+  playerTurn = 'one';
+  playerOneScore = 0;
+  playerTwoScore = 0;
+  whichPlayerPointsBox.text(playerTwoScore);
+  whichPlayerPointsBox = $('.points1');
+  whichPlayerPointsBox.text(playerOneScore);
+  remainingTime = 30;
+  $('.timer span').text(remainingTime);
+  $('.winner').text('');
+  $('.blue-monster').removeClass('monster-jump');
+};
+
+// starts game
+$('.start-button').click(startGame);
 $(window).keydown(moveMonster);
+
+// hide next turn button on startTimer
+// show when time runs out
+$('.next-turn').click(nextTurn);
+$('.reset').click(resetGame);

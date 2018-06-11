@@ -316,10 +316,11 @@ h1 {
   color: white;
   font-family: 'Rokkitt', serif;
   text-align: center;
-  word-spacing: 2px;
+  word-spacing: 1px;
   line-height: 2;
   box-shadow: 10px 10px 4px rgba(0,0,0,.8);
   z-index: 10;
+  font-size: 25px;
 }
 
 .players {
@@ -327,17 +328,23 @@ h1 {
   background: #cdc854;
   border: solid black;
   font-size: 30px;
-  padding: .5em;
-  padding-bottom: .5em;
-  width: 50%;
+  padding: .8em;
+  width: 40%;
   margin: 2em auto 0;
   display: flex;
   justify-content: center;
   z-index: 10;
+  text-align: center;
 }
 
 .para-score {
   display: inline-block;
+  margin: 0 .5em;
+}
+
+.player-text {
+  font-weight: bold;
+  font-size: 35px;
 }
 
 #player1, #player2 :hover {
@@ -347,11 +354,6 @@ h1 {
 
 #player-two {
   margin-left: 2em;
-}
-
-.player-button {
-  font-size: 30px;
-  margin-right: 1em;
 }
 
 .start-wrapper {
@@ -409,6 +411,7 @@ h1 {
 .score-board p {
   margin: 0;
   padding: 0;
+  padding-bottom: 2em;
 }
 
 .monster-z-index {
@@ -439,10 +442,8 @@ h1 {
 }
 
 .monster-jump {
-  transform-origin: bottom right;
   animation: jump 1.5s infinite;
 }
-
 
 @keyframes jump {
   25% {
@@ -455,12 +456,6 @@ h1 {
     transform: translate(5px, -20px) rotate(10deg);
   }
 }
-
-/* @keyframes jump {
-  75% {
-    transform: rotate(35deg);
-  }
-} */
 
 @keyframes fall {
   0 {

@@ -11,13 +11,11 @@
     <title>Monch Monch Monch</title>
   </head>
   <body>
-    <audio id="pickup-sound" src="sounds/sounds/Pickup_Coin31.bfxrsound">AUDIO ON OFF</audio>
     <h1>MONCH! MONCH! MONCH!</h1>
     <div class="img-p-wrapper">
       <p class="directions">Directions: Cookie Monster has an apetite for some delicious cookies. Help him collect as many cookies
         as you can by clicking on the cookies as they fall from the sky. Avoid clicking on the peppers because they will deduct
-        one point from your existing score. Get as many cookies as you can in 20 seconds. Good luck! <br>Game will start once you have
-        selected 'player 1' or 'player 2' and by clicking the start button.</br></p>
+        one point from your existing score. See who can get the most in 30 seconds. Good luck!</p>
 
       <img class="falling cookie1 cookie" src="images/cookie.png" alt="cookie">
       <img class="falling cookie2 cookie" src="images/cookie.png" alt="cookie">
@@ -54,15 +52,15 @@
     </div>
 
     <div class="players">
-      <button id="player-one" class="player-button" type="button">PLAYER 1</button>
-      <p class="para-score">SCORE: <span class="points1">0</span></p>
-      <button id="player-two" class="player-button" type="button">PLAYER 2</button>
-      <p class="para-score">SCORE: <span class="points2">0</span></p>
+      <p class="para-score"><span class="player-text">PLAYER 1 </span>SCORE: <span class="points1">0</span></p>
+      <p class="para-score"><span class="player-text">PLAYER 2 </span>SCORE: <span class="points2">0</span></p>
+      <p class="winner"></p>
     </div>
     <br>
     <div class="start-wrapper">
       <button class="start-button">Start</button>
-      <button class="play-again">PLAY AGAIN</button>
+      <button class="next-turn">NEXT TURN</button>
+      <button class="reset">RESET</button>
     </div>
 
 
