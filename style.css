@@ -290,42 +290,57 @@ h1 {
   word-spacing: 2px;
   line-height: 2;
   box-shadow: 10px 10px 4px rgba(0,0,0,.8);
+  z-index: 10;
 }
 
 .players {
-  position: absolute;
   background: #cdc854;
-  width: 4em;
-  top: 5em;
   border: solid black;
-  /* border-radius: 3em; */
   font-size: 30px;
   padding: .5em;
   padding-bottom: .5em;
+  width: 50%;
+  margin: 2em auto 0;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+}
+
+.para-score {
+  display: inline-block;
+}
+
+#player-two {
+  margin-left: 2em;
 }
 
 .player-button {
-  position: absolute;
   font-size: 30px;
 }
 
+.start-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 .start-button {
-  position: absolute;
   top: 29em;
   left: 800px;
   font-size: 3em;
-  /* visibility: hidden;    add to my js*/
 }
 
 .play-again {
-  position: absolute;
   top: 42em;
   left: 1350px;
   font-size: 3em;
 }
 
+.falling {
+  z-index: 1;
+  cursor: pointer;
+}
+
 .timer {
-  position: absolute;
   width: 6.5em;
   height: 3.5em;
   padding: .2em;
@@ -341,7 +356,6 @@ h1 {
 }
 
 .score-board {
-  position: absolute;
   display: inline-block;
   background: #7d6439;
   opacity: 0.9;
@@ -356,7 +370,6 @@ h1 {
 }
 
 .score-board p {
-  position: absolute;
   margin: 0;
   padding: 0;
 }
@@ -370,16 +383,19 @@ h1 {
   font-size: 28px;
   position: relative;
 } */
+.monster-z-index {
+  z-index: -30;
+}
 
 .cookie-monster {
-  position: absolute;
   user-select: none;
   background: none;
   height: 380px;
   width: 380px;
 }
+
 .blue-monster {
-  position: absolute;
+  position: relative;
   user-select: none;
   background: none;
   height: 150px;
@@ -388,12 +404,11 @@ h1 {
 }
 
 .oscar {
-  position: absolute;
   user-select: none;
   background: none;
   width: 300px;
-  left: 800px;
-  left: 20em;
+  position: relative;
+  left: 45vw;
 }
 
 .monster-jump {
@@ -401,7 +416,8 @@ h1 {
   animation: jump 1.5s infinite;
 }
 
-/* @keyframes jump {
+
+@keyframes jump {
   25% {
     transform: translate(-5px, -20px) rotate(-10deg);
   }
@@ -411,7 +427,7 @@ h1 {
   75% {
     transform: translate(5px, -20px) rotate(10deg);
   }
-} */
+}
 
 /* @keyframes jump {
   75% {
