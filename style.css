@@ -59,7 +59,7 @@ h1 {
 }
 
 .cookie4 {
-  left: 70vw;
+  left: 40vw;
   height: 80px;
   width: 80px;
   background: green;
@@ -68,7 +68,7 @@ h1 {
 }
 
 .cookie5 {
-  left: 80vw;
+  left: 50vw;
   height: 80px;
   width: 80px;
   background: blue;
@@ -77,7 +77,7 @@ h1 {
 }
 
 .cookie6 {
-  left: 90vw;
+  left: 60vw;
   height: 80px;
   width: 80px;
   background: purple;
@@ -86,7 +86,7 @@ h1 {
 }
 
 .cookie7 {
-  left: 100vw;
+  left: 33vw;
   height: 80px;
   width: 80px;
   background: white;
@@ -94,7 +94,7 @@ h1 {
   border-radius: 50%;
 }
 .cookie8 {
-  left: 95vw;
+  left: 32vw;
   height: 80px;
   width: 80px;
   background: black;
@@ -102,7 +102,7 @@ h1 {
   border-radius: 50%;
 }
 .cookie9 {
-  left: 85vw;
+  left: 37vw;
   height: 80px;
   width: 80px;
   background: limegreen;
@@ -209,7 +209,7 @@ h1 {
 }
 
 .pepper1 {
-  left: 35vw;
+  left: 22vw;
   height: 67px;
   width: 67px;
   background: #996439;
@@ -218,7 +218,7 @@ h1 {
 }
 
 .pepper2 {
-  left: 42vw;
+  left: 38vw;
   height: 65px;
   width: 65px;
   background: #996439;
@@ -227,7 +227,7 @@ h1 {
 }
 
 .pepper3 {
-  left: 47vw;
+  left: 41vw;
   height: 55px;
   width: 55px;
   background: #996439;
@@ -236,7 +236,7 @@ h1 {
 }
 
 .pepper4 {
-  left: 16vw;
+  left: 47vw;
   height: 65px;
   width: 65px;
   background: #996439;
@@ -245,7 +245,7 @@ h1 {
 }
 
 .pepper5 {
-  left: 25vw;
+  left: 55vw;
   height: 75px;
   width: 75px;
   background: #996439;
@@ -254,7 +254,7 @@ h1 {
 }
 
 .pepper6 {
-  left: 36vw;
+  left: 59vw;
   height: 45px;
   width: 45px;
   background: #996439;
@@ -263,7 +263,34 @@ h1 {
 }
 
 .pepper7 {
-  left: 46vw;
+  left: 64vw;
+  height: 65px;
+  width: 65px;
+  background: #996439;
+  animation-delay: 2.5s;
+  border-radius: 50%;
+}
+
+.pepper8 {
+  left: 68vw;
+  height: 65px;
+  width: 65px;
+  background: #996439;
+  animation-delay: 2.5s;
+  border-radius: 50%;
+}
+
+.pepper9 {
+  left: 73vw;
+  height: 65px;
+  width: 65px;
+  background: #996439;
+  animation-delay: 2.5s;
+  border-radius: 50%;
+}
+
+.pepper10 {
+  left: 76vw;
   height: 65px;
   width: 65px;
   background: #996439;
@@ -309,6 +336,11 @@ h1 {
 .para-score {
   display: inline-block;
 }
+
+#player1, #player2 :hover {
+  background: #9effae;
+}
+
 
 #player-two {
   margin-left: 2em;
@@ -374,15 +406,6 @@ h1 {
   padding: 0;
 }
 
-/* .timer-thirty {
-  background: #ebd46e;
-  height: 70px;
-  width: 250px;
-  color: white;
-  border: solid black;
-  font-size: 28px;
-  position: relative;
-} */
 .monster-z-index {
   z-index: -30;
 }
@@ -400,7 +423,6 @@ h1 {
   background: none;
   height: 150px;
   width: 150px;
-  /* right: -50px; */
 }
 
 .oscar {
@@ -440,6 +462,6 @@ h1 {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(200vh);
+    transform: translateY(120vh);
   }
 }
