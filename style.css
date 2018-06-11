@@ -2,6 +2,7 @@ body {
     background-image: url("file:///Users/evabarrett/coding/Unit1/week-two/Monch-Monch-Monch-/images/brick-gray.jpg");
     background-repeat: repeat-y repeat-x;
     /* margin-top: 25em; */
+    user-select: none;
 }
 
 h1 {
@@ -145,8 +146,8 @@ h1 {
 }
 .cookie14 {
   left: 60vw;
-  height: 80px;
-  width: 80px;
+  height: 60px;
+  width: 60px;
   background: #1f9de8;
   animation-delay: 5.5s;
   border-radius: 50%;
@@ -177,8 +178,8 @@ h1 {
 }
 .cookie18 {
   left: 40vw;
-  height: 80px;
-  width: 80px;
+  height: 50px;
+  width: 50px;
   background: #e88555;
   animation-delay: 4.5s;
   border-radius: 50%;
@@ -237,8 +238,8 @@ h1 {
 
 .pepper4 {
   left: 47vw;
-  height: 65px;
-  width: 65px;
+  height: 85px;
+  width: 85px;
   background: #996439;
   animation-delay: 3.5s;
   border-radius: 50%;
@@ -255,8 +256,8 @@ h1 {
 
 .pepper6 {
   left: 59vw;
-  height: 45px;
-  width: 45px;
+  height: 65px;
+  width: 65px;
   background: #996439;
   animation-delay: 4.5s;
   border-radius: 50%;
@@ -303,13 +304,14 @@ h1 {
 }
 
 .directions {
+  padding-top: 1em;
   position: relative;
   height: 40%;
   margin: 0 auto;
   padding-left: 2em;
   padding-right: 2em;
   padding-bottom: 1em;
-  background: #0b4a3c;
+  background: #571d2c;
   font-size: 25px;
   color: white;
   font-family: 'Rokkitt', serif;
@@ -321,6 +323,7 @@ h1 {
 }
 
 .players {
+  position: relative;
   background: #cdc854;
   border: solid black;
   font-size: 30px;
@@ -330,7 +333,7 @@ h1 {
   margin: 2em auto 0;
   display: flex;
   justify-content: center;
-  z-index: 100;
+  z-index: 10;
 }
 
 .para-score {
@@ -348,6 +351,7 @@ h1 {
 
 .player-button {
   font-size: 30px;
+  margin-right: 1em;
 }
 
 .start-wrapper {
@@ -385,6 +389,7 @@ h1 {
   top: 11em;
   word-wrap: break-word;
   box-shadow: 10px 10px 4px rgba(0,0,0,.8);
+  z-index: -10;
 }
 
 .score-board {
