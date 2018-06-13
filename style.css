@@ -1,5 +1,5 @@
 body {
-    background-image: url("file:///Users/evabarrett/coding/Unit1/week-two/Monch-Monch-Monch-/images/brick-gray.jpg");
+    background-image: url("https://cdn.pixabay.com/photo/2017/10/31/21/26/brick-2906556_1280.jpg");
     background-repeat: repeat-y repeat-x;
     /* margin-top: 25em; */
     user-select: none;
@@ -361,10 +361,18 @@ h1 {
   justify-content: center;
 }
 
+.next-turn, .reset {
+  font-size: 23px;
+  font-weight: bold;
+  margin-left: 2em;
+  box-shadow: 10px 10px 4px rgba(0,0,0,.8);
+}
+
 .start-button {
   top: 29em;
   left: 800px;
   font-size: 3em;
+  box-shadow: 10px 10px 4px rgba(0,0,0,.8);
 }
 
 .play-again {
