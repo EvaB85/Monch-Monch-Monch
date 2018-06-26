@@ -14,6 +14,8 @@ var monster = {
 
 // hides cookies and peppers to start
 $('.falling').hide();
+$('.reset').css('visibility', 'hidden');
+$('.next-turn').css('visibility', 'hidden');
 
 // lets user move monster
 var moveMonster = function(e) {
@@ -29,8 +31,6 @@ var moveMonster = function(e) {
     monster.element.css('left', monster.position + 'px');
   }
 };
-
-// need player one and two
 
 // run function for each cookie
 // recieve one point per user's click
@@ -63,12 +63,15 @@ var checkForWin = function() {
   if (playerTurn === 'two') {
     if (playerOneScore > playerTwoScore) {
       $('.winner').text('PLAYER ONE WINS!');
+      $('.next-turn').css('visibility', 'hidden');
       $('.blue-monster').addClass('monster-jump');
     } else if (playerOneScore < playerTwoScore) {
       $('.winner').text('PLAYER TWO WINS!');
+      $('.next-turn').css('visibility', 'hidden');
       $('.blue-monster').addClass('monster-jump');
     } else if (playerOneScore === playerTwoScore) {
       $('.winner').text('IT\'S A TIE');
+      $('.next-turn').css('visibility', 'hidden');
       $('.blue-monster').addClass('monster-jump');
     }
   }
@@ -78,13 +81,17 @@ var checkForWin = function() {
 var startTimer = function () {
   var timer = setInterval(function() {
     remainingTime--;
-    $('.timer span').text(remainingTime);
+    if (remainingTime <= 9) {
+      $('.timer span').text('0' + remainingTime);
+    } else {
+      $('.timer span').text(remainingTime);
+    }
     if (remainingTime <= 0) {
       clearInterval(timer);
       $('.falling').hide();
-      checkForWin();
       $('.next-turn').css('visibility', 'visible');
       $('.reset').css('visibility', 'visible');
+      checkForWin();
     };
   }, 1000);
 };
@@ -114,7 +121,6 @@ var nextTurn  = function() {
   $('.start-button').css('visibility', 'visible');
   playerTurn = 'two';
   whichPlayerPointsBox = $('.points2');
-// setting where the points will go on the page DELETE ME DELETE ME!!!!!!!!!!!!!!!!!
   remainingTime = 30;
   $('.timer span').text(remainingTime);
 };
@@ -122,6 +128,7 @@ var nextTurn  = function() {
 // reset game function
 var resetGame = function() {
   $('.start-button').css('visibility', 'visible');
+  $('.next-turn').css('visibility', 'hidden');
   playerTurn = 'one';
   playerOneScore = 0;
   playerTwoScore = 0;
